@@ -1,0 +1,2312 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "My Turn Admin API",
+    "description": "",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Hey-Feres",
+      "email": "brunoferesvillela@icloud.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://echo.paw.cloud/",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/{base_url}/api/admin/v1/stores/{store_id}/sellers/": {
+      "get": {
+        "summary": "Index",
+        "description": "",
+        "operationId": "5cd0a645-0861-4641-be52-251eb445804e",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {}
+          },
+          "required": false
+        },
+        "responses": {
+          "401": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "errors": {
+                      "type": "string",
+                      "items": {
+                        "type": "string"
+                      },
+                      "example": [
+                        "Para continuar, efetue login ou registre-se."
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "X-Runtime": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.012331"
+                }
+              },
+              "Set-Cookie": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "_my_turn_session=X8NWDSc3UQAgIHGAAFDD4lKXQ24iH4eXdx%2FvQ%2FE7h87m6Y7upagH2UIQdmfX1WwFzA%3D%3D--JO6jLGA17IV%2FaJ5K--KTFcr8RzLbEf7ORXn1cc2g%3D%3D; path=/; HttpOnly"
+                }
+              },
+              "X-Download-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "noopen"
+                }
+              },
+              "X-XSS-Protection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "none"
+                }
+              },
+              "Referrer-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "strict-origin-when-cross-origin"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "no-cache"
+                }
+              },
+              "X-Request-Id": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "df910218-9650-46c5-ab62-2abfc9f17f18"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "close"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "SAMEORIGIN"
+                }
+              },
+              "Vary": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept, Origin"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/{store_id}/sellers/bulk_create/": {
+      "post": {
+        "summary": "Bulk Create",
+        "description": "",
+        "operationId": "fe8268dd-da47-4f55-b38a-676941ef5642",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "multipart/form-data; boundary=qGIQ5nipewEQuAsCVQGGQnGXYlDvhMvR",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sellers[][id]": {
+                    "type": "string",
+                    "items": {
+                      "type": "string",
+                      "format": "utc-millisec"
+                    },
+                    "example": [
+                      "26",
+                      "27"
+                    ]
+                  },
+                  "sellers[][name]": {
+                    "type": "string",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "Sarah",
+                      "Adriano"
+                    ]
+                  },
+                  "sellers[][photo]": {
+                    "type": "string",
+                    "items": {
+                      "type": "string"
+                    },
+                    "example": [
+                      "",
+                      ""
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "format": "utc-millisec"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "attributes": {
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "type": "string"
+                              },
+                              "photo-url": {
+                                "type": "string"
+                              },
+                              "in-store": {
+                                "type": "boolean"
+                              },
+                              "current-service-id": {
+                                "type": "null"
+                              },
+                              "added-at": {
+                                "type": "null"
+                              },
+                              "amount-sold": {
+                                "type": "string"
+                              },
+                              "current-goal": {
+                                "type": "string"
+                              },
+                              "full-goal": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Set-Cookie": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D; path=/; HttpOnly"
+                }
+              },
+              "X-Runtime": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.133818"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=0, private, must-revalidate"
+                }
+              },
+              "Referrer-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "strict-origin-when-cross-origin"
+                }
+              },
+              "client": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "YKEgWhafyUoAtpeFVv6kMQ"
+                }
+              },
+              "X-Download-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "noopen"
+                }
+              },
+              "token-type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer"
+                }
+              },
+              "Vary": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept, Origin"
+                }
+              },
+              "X-XSS-Protection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "close"
+                }
+              },
+              "uid": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "bruno@test.com"
+                }
+              },
+              "Authorization": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ=="
+                }
+              },
+              "expiry": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1752621054"
+                }
+              },
+              "X-Request-Id": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "b1117fb7-8558-4ae1-8fc9-0fc1b395b66d"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "SAMEORIGIN"
+                }
+              },
+              "access-token": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "5r6ilpIHWdTAbWcV_og9iw"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Etag": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"41ec7b61e3517a6d194a80fa6ed205a7\""
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "none"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/{store_id}/sellers/58/": {
+      "delete": {
+        "summary": "Destroy",
+        "description": "",
+        "operationId": "0d86748a-44c8-4045-b43c-3556b0f57ce0",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {}
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/{store_id}/service_details/": {
+      "get": {
+        "summary": "Index",
+        "description": "",
+        "operationId": "0294d4e5-d3e4-4ac3-827e-4f24f85a721f",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {}
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "format": "utc-millisec"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "attributes": {
+                            "type": "object",
+                            "properties": {
+                              "title": {
+                                "type": "string"
+                              },
+                              "can-be-deleted": {
+                                "type": "boolean"
+                              },
+                              "display": {
+                                "type": "boolean"
+                              }
+                            }
+                          },
+                          "relationships": {
+                            "type": "object",
+                            "properties": {
+                              "store": {
+                                "type": "object",
+                                "properties": {
+                                  "data": {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string",
+                                        "format": "utc-millisec"
+                                      },
+                                      "type": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "links": {
+                      "type": "object",
+                      "properties": {
+                        "self": {
+                          "type": "string",
+                          "example": "https://staging.myturn.com.br/api/admin/v1/stores/1/service_details?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                        },
+                        "first": {
+                          "type": "string",
+                          "example": "https://staging.myturn.com.br/api/admin/v1/stores/1/service_details?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                        },
+                        "prev": {
+                          "nullable": true
+                        },
+                        "next": {
+                          "nullable": true
+                        },
+                        "last": {
+                          "type": "string",
+                          "example": "https://staging.myturn.com.br/api/admin/v1/stores/1/service_details?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "page": {
+                          "type": "string",
+                          "example": "1"
+                        },
+                        "total-pages": {
+                          "type": "integer",
+                          "format": "int64",
+                          "example": 1
+                        },
+                        "total-items": {
+                          "type": "integer",
+                          "format": "int64",
+                          "example": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Set-Cookie": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "_my_turn_session=6kcBlD64FDDNPE%2BLE4dulz%2FQv3W5RZtccoUNjTFNTcXo%2FcjRRnmigUZffqYSyeSSt4f56RkTmS5fI58xPYUPcmIDUR6YTS4gcIzTv2J1l8uOOiHmV6PemafXHLW%2BNfpkSffZ6ZZvfHfDuIdkDaA%3D--2LhdP5WGnonmjQZx--YpwGSW%2BE3%2FQF4Yx6VUfk4A%3D%3D; path=/; secure; HttpOnly"
+                }
+              },
+              "X-Runtime": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.390919"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nginx"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=0, private, must-revalidate"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=63072000; includeSubDomains"
+                }
+              },
+              "Referrer-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "strict-origin-when-cross-origin"
+                }
+              },
+              "client": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "eVKvj_OWabgkYEDBYO2P0w"
+                }
+              },
+              "X-Download-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "noopen"
+                }
+              },
+              "token-type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "633"
+                }
+              },
+              "X-XSS-Protection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "Date": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Mon, 09 Jun 2025 12:49:25 GMT"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "close"
+                }
+              },
+              "uid": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "bruno@test.com"
+                }
+              },
+              "Vary": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept, Origin"
+                }
+              },
+              "Authorization": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI5ZGFsVzV6TDc5eEpTT2NRdUF4ZTdRIiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6ImVWS3ZqX09XYWJna1lFREJZTzJQMHciLCJleHBpcnkiOiIxNzUwNDQ1MTg2IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ=="
+                }
+              },
+              "expiry": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1750445186"
+                }
+              },
+              "X-Request-Id": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "2ccb56b7-e652-47bd-bf6e-c80f18329ede"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "SAMEORIGIN, DENY"
+                }
+              },
+              "access-token": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "9dalW5zL79xJSOcQuAxe7Q"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Etag": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"f400703c4513593de94ab7595d0a10db\""
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "none"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff, nosniff"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      },
+      "post": {
+        "summary": "Create",
+        "description": "",
+        "operationId": "e8e1e704-fff6-48d9-893e-3ef0d9e25063",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "service_detail": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "example": "Cliente Fidelidade"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "2"
+                        },
+                        "type": {
+                          "type": "string",
+                          "example": "service-details"
+                        },
+                        "attributes": {
+                          "type": "object",
+                          "properties": {
+                            "title": {
+                              "type": "string",
+                              "example": "Cliente Fidelidade"
+                            },
+                            "can-be-deleted": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "relationships": {
+                          "type": "object",
+                          "properties": {
+                            "store": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string",
+                                      "example": "1"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "example": "stores"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Set-Cookie": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "_my_turn_session=DCuOtvSD%2BL4XQIzz7jDBKn4rPqxGPErjhwwytTHEXDOaafx%2FNCBX%2FPQhGEx2nZg5hp9I%2FSIioS9uUv8k9nD4SSxjiEHeVceO0Vp6AkArushEugrZGCV2tcgyvA0A9f8nxtKmCzPFE8Ht%2Bw6R2nk%3D--AwMMwqQRPAdl0jFy--EiY4uW1CfPfQUoNIYQi4kA%3D%3D; path=/; secure; HttpOnly"
+                }
+              },
+              "X-Runtime": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.054507"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nginx"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=0, private, must-revalidate"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=63072000; includeSubDomains"
+                }
+              },
+              "Referrer-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "strict-origin-when-cross-origin"
+                }
+              },
+              "client": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "eVKvj_OWabgkYEDBYO2P0w"
+                }
+              },
+              "X-Download-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "noopen"
+                }
+              },
+              "token-type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "172"
+                }
+              },
+              "X-XSS-Protection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "Date": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Mon, 09 Jun 2025 12:34:33 GMT"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "close"
+                }
+              },
+              "uid": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "bruno@test.com"
+                }
+              },
+              "Vary": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept, Origin"
+                }
+              },
+              "Authorization": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI5ZGFsVzV6TDc5eEpTT2NRdUF4ZTdRIiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6ImVWS3ZqX09XYWJna1lFREJZTzJQMHciLCJleHBpcnkiOiIxNzUwNDQ1MTg2IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ=="
+                }
+              },
+              "expiry": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1750445186"
+                }
+              },
+              "X-Request-Id": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "79587630-5db7-4282-9dd7-1a72d7a023ce"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "SAMEORIGIN, DENY"
+                }
+              },
+              "access-token": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "9dalW5zL79xJSOcQuAxe7Q"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Etag": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"d8a0cb4d6c18427be6527e67280d9b88\""
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "none"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff, nosniff"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/{store_id}/service_details/4/": {
+      "put": {
+        "summary": "Update",
+        "description": "",
+        "operationId": "f2e4e9b7-9e84-4dcb-bb6a-0b08dd2259b8",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "service_detail": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "example": "Cliente Fidelidade"
+                      },
+                      "display": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "4"
+                        },
+                        "type": {
+                          "type": "string",
+                          "example": "service-details"
+                        },
+                        "attributes": {
+                          "type": "object",
+                          "properties": {
+                            "title": {
+                              "type": "string",
+                              "example": "Cliente Fidelidade"
+                            },
+                            "can-be-deleted": {
+                              "type": "boolean"
+                            },
+                            "display": {
+                              "type": "boolean"
+                            }
+                          }
+                        },
+                        "relationships": {
+                          "type": "object",
+                          "properties": {
+                            "store": {
+                              "type": "object",
+                              "properties": {
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string",
+                                      "example": "1"
+                                    },
+                                    "type": {
+                                      "type": "string",
+                                      "example": "stores"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Set-Cookie": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "_my_turn_session=bth%2FssZwYj1Rt6OKza481%2FiJOYfT52COJWFK2zdT3ON6gfbwNK%2F3ZLpRFGYk00%2Fj8Rk%2BcpYI7OGJGFIrLnrC97HHWy1Wno7cdi%2FHzJmVby6Ap8k4vAt2BcVGe3Fai%2BLceXfQPe1TXq7FFU8zmVzfbpsqiw7OFDbPjITUmtS7IoxcLxIMKRKtDaJi5u0gRdDAsizu%2BewJf3JBvZ7mhjDJAAPlEpRd%2Bkdm--jKem9r32f8OB25n6--iI4CkdBrvIcXbfEKZD9hcA%3D%3D; path=/; HttpOnly"
+                }
+              },
+              "X-Runtime": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.033162"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=0, private, must-revalidate"
+                }
+              },
+              "Referrer-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "strict-origin-when-cross-origin"
+                }
+              },
+              "client": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "rwMbQPSNZNib1OnPTJ8HrA"
+                }
+              },
+              "X-Download-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "noopen"
+                }
+              },
+              "token-type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer"
+                }
+              },
+              "Vary": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept, Origin"
+                }
+              },
+              "X-XSS-Protection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "close"
+                }
+              },
+              "uid": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "bruno@test.com"
+                }
+              },
+              "Authorization": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJWbm83c043SnNweWN5VFRidFp2SkF3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6InJ3TWJRUFNOWk5pYjFPblBUSjhIckEiLCJleHBpcnkiOiIxNzUwNDQ1MDAzIiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ=="
+                }
+              },
+              "expiry": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1750445003"
+                }
+              },
+              "X-Request-Id": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "9a03ff2c-39bd-4304-b69b-3f63adf8482b"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "SAMEORIGIN"
+                }
+              },
+              "access-token": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Vno7sN7JspycyTTbtZvJAw"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Etag": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"c8cdd45554fd14fad6cda2ca99e2ce71\""
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "none"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      },
+      "delete": {
+        "summary": "Destroy",
+        "description": "",
+        "operationId": "d6a5a1de-d6e0-4865-9ec8-23b5173ad22c",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {}
+          },
+          "required": false
+        },
+        "responses": {
+          "204": {
+            "description": "",
+            "content": {
+              "text/plain": {
+                "example": {
+                  "value": {}
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/{store_id}/store_settings/": {
+      "get": {
+        "summary": "Show",
+        "description": "",
+        "operationId": "ac480208-5f40-4d1b-90c0-3ee0437a252a",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {}
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "18"
+                        },
+                        "type": {
+                          "type": "string",
+                          "example": "store-settings"
+                        },
+                        "attributes": {
+                          "type": "object",
+                          "properties": {
+                            "service-details-enabled": {
+                              "type": "boolean"
+                            },
+                            "service-amount-enabled": {
+                              "type": "boolean"
+                            },
+                            "queue-jump-allowed": {
+                              "type": "boolean"
+                            },
+                            "goals-enabled": {
+                              "type": "boolean"
+                            },
+                            "queue-seller-names-enabled": {
+                              "type": "boolean"
+                            },
+                            "no-conversion-tags-enabled": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Set-Cookie": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "_my_turn_session=X4K%2BIJE2oa38FJvqcjDJ7B2jz9%2BW9srMSrDCyEW79RMYPiaQvABoSFH8Y%2FbgvbQPSSkTZ5Thd4zH4MEndcybpsub55%2BWsYon46LiMH87KBcqUhDlgz0gC0P3UHbOnPubJP2hU85SBtLdvJZS0Ow%3D--zcVD9ePSsyp6MQHc--Z6k0zfN6ncvoPABsyAvP6Q%3D%3D; path=/; secure; HttpOnly"
+                }
+              },
+              "X-Runtime": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.458868"
+                }
+              },
+              "Server": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nginx"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=0, private, must-revalidate"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=63072000; includeSubDomains"
+                }
+              },
+              "Referrer-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "strict-origin-when-cross-origin"
+                }
+              },
+              "client": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "5RC2AWklJS3DGaUK7ELrjQ"
+                }
+              },
+              "X-Download-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "noopen"
+                }
+              },
+              "token-type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer"
+                }
+              },
+              "Content-Length": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "235"
+                }
+              },
+              "X-XSS-Protection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "Date": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Tue, 01 Jul 2025 23:27:27 GMT"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "close"
+                }
+              },
+              "uid": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "bruno@test.com"
+                }
+              },
+              "Vary": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept, Origin"
+                }
+              },
+              "Authorization": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer eyJhY2Nlc3MtdG9rZW4iOiJOM0NjdjJpOGx4SjJLN2hrSFAxbnZBIiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IjVSQzJBV2tsSlMzREdhVUs3RUxyalEiLCJleHBpcnkiOiIxNzUxODI3MDQyIiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ=="
+                }
+              },
+              "expiry": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1751827042"
+                }
+              },
+              "X-Request-Id": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "6f02a44a-47be-4d06-85d8-a2080e9be5be"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "SAMEORIGIN, DENY"
+                }
+              },
+              "access-token": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "N3Ccv2i8lxJ2K7hkHP1nvA"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Etag": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"2dd0aec1d4be5931ff106a2e9881760a\""
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "none"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff, nosniff"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      },
+      "put": {
+        "summary": "Update",
+        "description": "",
+        "operationId": "fdfcea89-f35d-4857-876e-32d81bc28353",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "store_setting": {
+                    "type": "object",
+                    "properties": {
+                      "service_details_enabled": {
+                        "type": "boolean"
+                      },
+                      "service_amount_enabled": {
+                        "type": "boolean"
+                      },
+                      "queue_jump_allowed": {
+                        "type": "boolean"
+                      },
+                      "queue_seller_names_enabled": {
+                        "type": "boolean"
+                      },
+                      "no_conversion_tags_enabled": {
+                        "type": "boolean"
+                      },
+                      "goals_enabled": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string",
+                          "example": "1"
+                        },
+                        "type": {
+                          "type": "string",
+                          "example": "store-settings"
+                        },
+                        "attributes": {
+                          "type": "object",
+                          "properties": {
+                            "service-details-enabled": {
+                              "type": "boolean"
+                            },
+                            "service-amount-enabled": {
+                              "type": "boolean"
+                            },
+                            "queue-jump-allowed": {
+                              "type": "boolean"
+                            },
+                            "goals-enabled": {
+                              "type": "boolean"
+                            },
+                            "queue-seller-names-enabled": {
+                              "type": "boolean"
+                            },
+                            "no-conversion-tags-enabled": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Set-Cookie": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "_my_turn_session=N%2BDlEWYhc6p%2BSURV%2FpWt3OCTiY2YM3xNANatDUOgPQ29EFT7V92unZZ47AvpfGUTi5LJfmMXzs%2BmNWEpFEx73BaA%2BZ%2FKr7RFVcpDAvLmeeMwzgYjFlKfcoA8OS1%2FVjX1yueCmpJjrTt2PY9M8ss%3D--4%2BiiEWCHKfPTrI0K--1PTETuQ0Y6K9RSSs6vHoag%3D%3D; path=/; HttpOnly"
+                }
+              },
+              "X-Runtime": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "0.040554"
+                }
+              },
+              "Cache-Control": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "max-age=0, private, must-revalidate"
+                }
+              },
+              "Referrer-Policy": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "strict-origin-when-cross-origin"
+                }
+              },
+              "client": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "YKEgWhafyUoAtpeFVv6kMQ"
+                }
+              },
+              "X-Download-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "noopen"
+                }
+              },
+              "token-type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer"
+                }
+              },
+              "Vary": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Accept, Origin"
+                }
+              },
+              "X-XSS-Protection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1; mode=block"
+                }
+              },
+              "Connection": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "close"
+                }
+              },
+              "uid": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "bruno@test.com"
+                }
+              },
+              "Authorization": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ=="
+                }
+              },
+              "expiry": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "1752621054"
+                }
+              },
+              "X-Request-Id": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "7f8531c3-a6e4-417a-adf0-77b09e48ca62"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "SAMEORIGIN"
+                }
+              },
+              "access-token": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "5r6ilpIHWdTAbWcV_og9iw"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "chunked"
+                }
+              },
+              "Content-Type": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "application/json; charset=utf-8"
+                }
+              },
+              "Etag": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"9c4596e642d247edfd79f0e10e63ef38\""
+                }
+              },
+              "X-Permitted-Cross-Domain-Policies": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "none"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "",
+                "schema": {
+                  "type": "string",
+                  "example": "nosniff"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/{store_id}/": {
+      "get": {
+        "summary": "Show",
+        "description": "",
+        "operationId": "f8efd630-db6f-4bde-aa6d-ba3153d54d5f",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "text/plain": {}
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/": {
+      "post": {
+        "summary": "Create",
+        "description": "",
+        "operationId": "7c7d4a95-e269-498a-bc57-aa89a9559c69",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "store": {
+                    "type": "object",
+                    "properties": {
+                      "cnpj": {
+                        "type": "string",
+                        "example": "42.123.541/0001-57"
+                      },
+                      "state": {
+                        "type": "string",
+                        "example": "MG"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "My Store"
+                      },
+                      "city": {
+                        "type": "string",
+                        "example": "Belo Horizonte"
+                      },
+                      "manager_phone": {
+                        "type": "string",
+                        "example": "(31)997908508"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": []
+      }
+    },
+    "/{base_url}/api/admin/v1/stores/10/": {
+      "put": {
+        "summary": "Update",
+        "description": "",
+        "operationId": "7fe56455-43c6-403e-b204-4e82db699c74",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "store": {
+                    "type": "object",
+                    "properties": {
+                      "state": {
+                        "type": "string",
+                        "example": "MG"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "My Store 2"
+                      },
+                      "city": {
+                        "type": "string",
+                        "example": "Belo Horizonte"
+                      },
+                      "manager_phone": {
+                        "type": "string",
+                        "example": "(31)997908508"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {}
+}
