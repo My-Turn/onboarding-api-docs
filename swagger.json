@@ -1,0 +1,464 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My Turn Admin API",
+    "description": "This document was generated from the branch main.\n\nIf you are a contributor to this project, you may access it here: https://paw.cloud/account/teams/9351108/projects/393336",
+    "version": "v0.0.0",
+    "contact": {
+      "name": "My Turn",
+      "url": "https://paw.cloud/account/teams/9351108"
+    }
+  },
+  "host": "localhost:3001",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/api/admin/v1/stores",
+  "paths": {
+    "/1/sellers": {
+      "get": {
+        "summary": "Index",
+        "description": "",
+        "operationId": "5cd0a645-0861-4641-be52-251eb445804e",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/1/sellers/bulk_create": {
+      "post": {
+        "summary": "Bulk Create",
+        "description": "",
+        "operationId": "fe8268dd-da47-4f55-b38a-676941ef5642",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "array",
+            "name": "sellers[][id]",
+            "required": false,
+            "in": "formData",
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "array",
+            "name": "sellers[][name]",
+            "required": false,
+            "in": "formData",
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "type": "array",
+            "name": "sellers[][photo]",
+            "required": false,
+            "in": "formData",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/1/sellers/58": {
+      "delete": {
+        "summary": "Destroy",
+        "description": "",
+        "operationId": "0d86748a-44c8-4045-b43c-3556b0f57ce0",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/1/service_details": {
+      "get": {
+        "summary": "Index",
+        "description": "",
+        "operationId": "0294d4e5-d3e4-4ac3-827e-4f24f85a721f",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create",
+        "description": "",
+        "operationId": "e8e1e704-fff6-48d9-893e-3ef0d9e25063",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\n\t\"service_detail\": {\n\t\t\"title\": \"Cliente Fidelidade\"\n\t}\n}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/1/service_details/4": {
+      "put": {
+        "summary": "Update",
+        "description": "",
+        "operationId": "f2e4e9b7-9e84-4dcb-bb6a-0b08dd2259b8",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\n\t\"service_detail\": {\n\t\t\"title\": \"Cliente Fidelidade\",\n    \t\"display\": false\n\t}\n}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Destroy",
+        "description": "",
+        "operationId": "d6a5a1de-d6e0-4865-9ec8-23b5173ad22c",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/1/store_settings": {
+      "get": {
+        "summary": "Show",
+        "description": "",
+        "operationId": "ac480208-5f40-4d1b-90c0-3ee0437a252a",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update",
+        "description": "",
+        "operationId": "fdfcea89-f35d-4857-876e-32d81bc28353",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\n  \"store_setting\": {\n    \"service_details_enabled\": false,\n    \"service_amount_enabled\": true,\n    \"queue_jump_allowed\": true,\n    \"goals_enabled\": true,\n    \"queue_seller_names_enabled\": true,\n    \"no_conversion_tags_enabled\": true\n  }\n}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/1": {
+      "get": {
+        "summary": "Show",
+        "description": "",
+        "operationId": "f8efd630-db6f-4bde-aa6d-ba3153d54d5f",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/": {
+      "post": {
+        "summary": "Create",
+        "description": "",
+        "operationId": "7c7d4a95-e269-498a-bc57-aa89a9559c69",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\n  \"store\": {\n    \"name\": \"My Store\",\n    \"city\": \"Belo Horizonte\",\n    \"state\": \"MG\",\n    \"manager_phone\": \"(31)997908508\",\n    \"cnpj\": \"42.123.541/0001-57\"\n  }\n}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/10": {
+      "put": {
+        "summary": "Update",
+        "description": "",
+        "operationId": "7fe56455-43c6-403e-b204-4e82db699c74",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "Accept",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "",
+            "name": "Cookie",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\n  \"store\": {\n    \"name\": \"My Store 2\",\n    \"city\": \"Belo Horizonte\",\n    \"state\": \"MG\",\n    \"manager_phone\": \"(31)997908508\"\n  }\n}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "oauth_2_auth": {
+      "type": "oauth2",
+      "scopes": {}
+    }
+  },
+  "tags": []
+}
