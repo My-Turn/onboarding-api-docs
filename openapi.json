@@ -18,7 +18,7 @@
   "paths": {
     "/{base_url}/api/admin/v1/stores/{store_id}/sellers/": {
       "get": {
-        "summary": "Index",
+        "summary": "List Sellers",
         "description": "",
         "operationId": "5cd0a645-0861-4641-be52-251eb445804e",
         "parameters": [
@@ -194,7 +194,7 @@
     },
     "/{base_url}/api/admin/v1/stores/{store_id}/sellers/bulk_create/": {
       "post": {
-        "summary": "Bulk Create",
+        "summary": "Bulk Create Sellers",
         "description": "",
         "operationId": "fe8268dd-da47-4f55-b38a-676941ef5642",
         "parameters": [
@@ -489,9 +489,9 @@
         "security": []
       }
     },
-    "/{base_url}/api/admin/v1/stores/{store_id}/sellers/58/": {
+    "/{base_url}/api/admin/v1/stores/{store_id}/sellers/{seller_id}/": {
       "delete": {
-        "summary": "Destroy",
+        "summary": "Destroy Seller",
         "description": "",
         "operationId": "0d86748a-44c8-4045-b43c-3556b0f57ce0",
         "parameters": [
@@ -549,7 +549,7 @@
     },
     "/{base_url}/api/admin/v1/stores/{store_id}/service_details/": {
       "get": {
-        "summary": "Index",
+        "summary": "List Service Detais",
         "description": "",
         "operationId": "0294d4e5-d3e4-4ac3-827e-4f24f85a721f",
         "parameters": [
@@ -877,7 +877,7 @@
         "security": []
       },
       "post": {
-        "summary": "Create",
+        "summary": "Create Service Details",
         "description": "",
         "operationId": "e8e1e704-fff6-48d9-893e-3ef0d9e25063",
         "parameters": [
@@ -1175,9 +1175,9 @@
         "security": []
       }
     },
-    "/{base_url}/api/admin/v1/stores/{store_id}/service_details/4/": {
+    "/{base_url}/api/admin/v1/stores/{store_id}/service_details/{service_detail_id}/": {
       "put": {
-        "summary": "Update",
+        "summary": "Update Service Detail",
         "description": "",
         "operationId": "f2e4e9b7-9e84-4dcb-bb6a-0b08dd2259b8",
         "parameters": [
@@ -1460,7 +1460,7 @@
         "security": []
       },
       "delete": {
-        "summary": "Destroy",
+        "summary": "Destroy Service Detail",
         "description": "",
         "operationId": "d6a5a1de-d6e0-4865-9ec8-23b5173ad22c",
         "parameters": [
@@ -1525,7 +1525,7 @@
     },
     "/{base_url}/api/admin/v1/stores/{store_id}/store_settings/": {
       "get": {
-        "summary": "Show",
+        "summary": "Show Store Settings",
         "description": "",
         "operationId": "ac480208-5f40-4d1b-90c0-3ee0437a252a",
         "parameters": [
@@ -1796,7 +1796,7 @@
         "security": []
       },
       "put": {
-        "summary": "Update",
+        "summary": "Update Store Settings",
         "description": "",
         "operationId": "fdfcea89-f35d-4857-876e-32d81bc28353",
         "parameters": [
@@ -2077,7 +2077,7 @@
     },
     "/{base_url}/api/admin/v1/stores/{store_id}/": {
       "get": {
-        "summary": "Show",
+        "summary": "Show Store",
         "description": "",
         "operationId": "f8efd630-db6f-4bde-aa6d-ba3153d54d5f",
         "parameters": [
@@ -2131,11 +2131,94 @@
           }
         },
         "security": []
+      },
+      "put": {
+        "summary": "Update Store",
+        "description": "",
+        "operationId": "7fe56455-43c6-403e-b204-4e82db699c74",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "application/json",
+              "description": ""
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
+              "description": ""
+            }
+          },
+          {
+            "name": "Cookie",
+            "in": "header",
+            "schema": {
+              "type": "string",
+              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
+              "description": ""
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "store": {
+                    "type": "object",
+                    "properties": {
+                      "state": {
+                        "type": "string",
+                        "example": "MG"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "My Store 2"
+                      },
+                      "city": {
+                        "type": "string",
+                        "example": "Belo Horizonte"
+                      },
+                      "manager_phone": {
+                        "type": "string",
+                        "example": "(31)997908508"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": []
       }
     },
     "/{base_url}/api/admin/v1/stores/": {
       "post": {
-        "summary": "Create",
+        "summary": "Create Store",
         "description": "",
         "operationId": "7c7d4a95-e269-498a-bc57-aa89a9559c69",
         "parameters": [
@@ -2197,91 +2280,6 @@
                       "name": {
                         "type": "string",
                         "example": "My Store"
-                      },
-                      "city": {
-                        "type": "string",
-                        "example": "Belo Horizonte"
-                      },
-                      "manager_phone": {
-                        "type": "string",
-                        "example": "(31)997908508"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": []
-      }
-    },
-    "/{base_url}/api/admin/v1/stores/10/": {
-      "put": {
-        "summary": "Update",
-        "description": "",
-        "operationId": "7fe56455-43c6-403e-b204-4e82db699c74",
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json",
-              "description": ""
-            }
-          },
-          {
-            "name": "Accept",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "application/json",
-              "description": ""
-            }
-          },
-          {
-            "name": "Authorization",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "Bearer eyJhY2Nlc3MtdG9rZW4iOiI1cjZpbHBJSFdkVEFiV2NWX29nOWl3IiwidG9rZW4tdHlwZSI6IkJlYXJlciIsImNsaWVudCI6IllLRWdXaGFmeVVvQXRwZUZWdjZrTVEiLCJleHBpcnkiOiIxNzUyNjIxMDU0IiwidWlkIjoiYnJ1bm9AdGVzdC5jb20ifQ==",
-              "description": ""
-            }
-          },
-          {
-            "name": "Cookie",
-            "in": "header",
-            "schema": {
-              "type": "string",
-              "default": "_my_turn_session=rjJR5DN4ijsppIXL2TIOEG8x1hT%2BwnBiZKrpjcvRCrNnNYATDDmM5z%2BDXfjU52Nct0yX4xZgHNQRwaYgyW%2BhuhHnNVEwPMOkMQPYN07DrlGAdt%2B5Yr5puZ0YH9r6SrP8ioWswWr3tjzQdUoVxSuv2xSADIZ6nY6DxM7NSeCHpvpGr%2FT2V%2FRk02BWCeC0YsS7iWs6zjN%2FHwCsCmm21C3nDTfVqYP%2F9skp--eC%2FTbsHVDQWtr5xP--YHv4oq91NLUKAK5qI3vQsw%3D%3D",
-              "description": ""
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "store": {
-                    "type": "object",
-                    "properties": {
-                      "state": {
-                        "type": "string",
-                        "example": "MG"
-                      },
-                      "name": {
-                        "type": "string",
-                        "example": "My Store 2"
                       },
                       "city": {
                         "type": "string",
